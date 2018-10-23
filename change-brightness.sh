@@ -1,4 +1,5 @@
 #!/bin/bash
+# TODO - take screen as argument and update other scripts which use this one
 BRIGHTNESS=$1
 
 if [[ $# < 1 ]];
@@ -13,7 +14,7 @@ then
 	exit
 fi
 
-xrandr --output eDP-1-1 --brightness ${BRIGHTNESS}
+xrandr --output eDP-1 --brightness ${BRIGHTNESS}
 
 echo ${BRIGHTNESS} > ~/.current-brightness
 
